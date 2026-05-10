@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main-container{
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 70px 30px 30px 30px;
+}
+.pk-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#semester-select {
+    padding: 3px 10px;
+    font-size: 16px;
+}
+#faculty-select {
+    padding: 3px 10px;
+    font-size: 16px;
+}
+.pk-content{
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    align-items: flex-start;
+    width: 100%;
+}
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.hcard {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.hcard h3{
+    text-align: center;
+    padding-bottom: 5px;
+}
+.pk-left { 
+    flex: 1; 
+} 
+.pk-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.pk-table th, .pk-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #121212;
+}
+.h-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.h-table th {
+    padding: 10px 5px;
+    text-align: center;
+    border: 1px solid #121212;
+}
+.h-table td{
+    text-align: left;
+    padding: 10px 5px;
+    border: 1px solid #121212;
+}
+.btn-select {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pk-right { 
+    flex: 1; 
+    position: sticky; 
+    top: 20px; 
+} 
+.pk-right h3{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.user-static-info p{
+    line-height: 1.75;
+}
+.user-info{
+    display: flex;
+    flex-direction: row;
+    gap: 75px;
+}
+#form-section{
+    display: none; 
+    margin-top: 20px; 
+    animation: fadeIn 0.5s;
+}
+.form-group {
+    margin: 15px 0;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+}
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-family: inherit;
+    margin: 10px 0;
+}
+.form-group input[readonly] {
+    background: #f9f9f9;
+    color: #777777;
+}
+.form-button{
+    display: flex;
+    justify-content: center;
+}
+.btn-submit {
+    width: 30%;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-submit:hover { 
+    background: #27ae60; 
+}
+.clickable-row:hover {
+    background-color: #e3f2fd;
+    cursor: pointer;
+}
+.disabled-row {
+    opacity: 0.5;
+    background-color: #f9f9f9;
+    cursor: not-allowed;
+}
+.disabled-row small {
+    font-weight: bold;
+    display: block;
+}

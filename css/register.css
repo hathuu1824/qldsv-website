@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(250deg, #3498db, #87cefa);
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+}
+.wallpaper-container{
+    order: 2;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+}
+.wallpaper-container .logo{
+    width: 100px;
+    height: auto;
+    animation: bounce 1.5s infinite;
+}
+.wallpaper-container p{
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.register-container{
+    order: 1;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    grid-column: 1;
+}
+.register-card{
+    width: 95%;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    background-color: #ffffff;
+}
+.register-card h2{
+    font-size: 30px;
+    color: #34495e;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+.register-card form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form-group{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    align-items: center; 
+}
+.form-group label{
+    display: block;
+    width: 30%;
+    font-size: 20px;
+}
+.form-group input{
+    width: 70%;
+    padding: 5px;
+    font-size: 18px;
+}
+.role-group {
+    display: flex;
+    flex-direction: row; 
+    gap: 15px;
+    width: 50%; 
+}
+.role-group input[type="radio"] {
+    display: none !important;
+}
+.role-group .role-item {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;  
+    border: 1px solid #34495e;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+.role-item i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #6b6363;
+}
+.role-item span {
+    font-size: 18px;
+    color: #34495e;
+    white-space: nowrap;
+}
+.role-group input[type="radio"]:checked + .role-item {
+    border: 2px solid #3498db;
+    background-color: #f4fafa;
+}
+.role-group input[type="radio"]:checked + .role-item i,
+.role-group input[type="radio"]:checked + .role-item span {
+    color: #3498db;
+    font-weight: bold;
+}
+.form-group input[type="submit"]{
+    width: 100%;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.form-group input[type="submit"]:hover{
+    background-color: #45a049;
+}
+.detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+.detail a{
+    font-size: 18px;
+    text-align: center;
+    color: #34495e;
+    text-decoration: none;
+}
+.detail a:hover{
+    color: #3498db;
+}
+button{
+    align-self: center;
+    padding: 10px;
+    width: 50%;
+    background-color: #34495e;
+    font-size: 20px;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #3498db;
+}
+
+@keyframes bounce {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-20px); 
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto; 
+    }
+    .register-container {
+        grid-row: 2; 
+        grid-column: 1;
+    }
+    .wallpaper-container {
+        grid-row: 1; 
+        grid-column: 1;
+        height: 300px; 
+    }
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-group label, .form-group input, .role-group {
+        width: 100%;
+    }
+}
