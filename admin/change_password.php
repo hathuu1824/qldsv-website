@@ -8,7 +8,7 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 
-require 'db_connection.php';
+require '../db_connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +36,7 @@ require 'db_connection.php';
     </style>
 </head>
 <body>
+    <?php include 'header.php'; ?>
     <main class="main-container">
         <div class="change-pwd-container">
             <h2 style="text-align: center; margin-bottom: 20px;">Đổi mật khẩu</h2>
